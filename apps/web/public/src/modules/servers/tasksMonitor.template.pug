@@ -1,0 +1,6 @@
+div
+  label Выберите дату: 
+  input(type="date", ng-model="$ctrl.selectedDate", ng-change="$ctrl.loadTasks($ctrl.selectedDate)")
+  
+  canvas(height="200px", chart, params="$ctrl.chartParams")
+

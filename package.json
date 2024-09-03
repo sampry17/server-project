@@ -1,0 +1,53 @@
+{
+  "name": "test_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:web": "node apps/web/index.js",
+    "lint-pug-templates": "npx prettier --write '**/*.pug' --plugin='@prettier/plugin-pug'",
+    "lint-fix": "eslint --fix . && npm run lint-pug-templates",
+    "build": "npm run build:web:client",
+    "build:web:client": "webpack --config ./apps/web/public/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://redmine.mobilon.ru:5000/test_project"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.26",
+    "@webdiscus/pug-loader": "^2.11.0",
+    "angular": "^1.8.3",
+    "angular-highlightjs": "^0.7.1",
+    "angular-resource": "^1.8.3",
+    "angular-ui-bootstrap": "^2.5.6",
+    "axios": "^1.6.8",
+    "bootstrap": "^3.4.1",
+    "chart.js": "^4.2.0",
+    "config": "^3.3.8",
+    "datatables.net-bs": "^1.13.11",
+    "express": "^4.19.2",
+    "jgrowl": "^1.4.7",
+    "jquery": "^3.6.3",
+    "moment": "^2.29.4",
+    "mongoose": "^8.6.0",
+    "pug": "^3.0.2",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.24.1",
+    "@babel/preset-env": "^7.24.4",
+    "@prettier/plugin-pug": "^3.0.0",
+    "babel-loader": "^9.1.0",
+    "css-loader": "^6.7.3",
+    "eslint": "^8.57.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-no-floating-promise": "^2.0.0",
+    "prettier": "^3.2.5",
+    "ts-loader": "^9.4.2",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0"
+  }
+}

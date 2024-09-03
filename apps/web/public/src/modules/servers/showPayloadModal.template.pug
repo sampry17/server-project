@@ -1,0 +1,7 @@
+.modal-header
+  button.close(type="button", ng-click="$ctrl.close()")
+    span(aria-hidden="true") ×
+  h4.modal-title Просмотр данных
+.modal-body
+  .row
+    code(hljs, source="$ctrl.payload", language="json") 
